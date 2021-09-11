@@ -1,10 +1,10 @@
+import { HomeModule } from './audiophile/pages/home/home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './core/component/header/header.component';
-import { HeroComponent } from './audiophile/component/hero/hero.component';
+import { HeaderComponent } from './audiophile/layout/header/header.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
 
@@ -12,12 +12,13 @@ import { LayoutModule } from '@angular/cdk/layout';
   declarations: [
     AppComponent,
     HeaderComponent,
-    HeroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LayoutModule
+    LayoutModule, // for breakpoint,
+    HomeModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
