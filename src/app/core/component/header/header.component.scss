@@ -12,6 +12,9 @@ header {
   margin-left: auto;
   margin-right: auto;
   z-index: 99;
+  .nav-btn {
+    display: none;
+  }
 
   ul {
     display: flex;
@@ -24,5 +27,21 @@ header {
     text-decoration: none;
     margin: 0 1em;
     color: #fff;
+  }
+
+  @media screen and (max-width: 768px) {
+    ul {
+      display: none;
+    }
+    nav{
+      order: -1;
+    }
+
+    .nav-btn {
+      display: block;
+      background-color: transparent;
+      fill: white;
+      border: none;
+    }
   }
 }
