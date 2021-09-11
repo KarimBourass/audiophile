@@ -1,0 +1,33 @@
+main {
+  background-image: url(../../../../assets/home/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 729px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-position: right top;
+
+  .hero-text {
+    margin-left: 50px;
+
+    span {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: hsl(0, 0%, 59%);
+    }
+
+    h1 {
+      margin: 10px 0;
+      text-transform: uppercase;
+    }
+    p {
+      width: 50%;
+      color: hsl(0, 0%, 59%);
+    }
+    button {
+      margin: 30px 0;
+    }
+  }
+}
