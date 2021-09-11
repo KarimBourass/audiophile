@@ -12,9 +12,6 @@ header {
   margin-left: auto;
   margin-right: auto;
   z-index: 99;
-  .nav-btn {
-    display: none;
-  }
 
   ul {
     display: flex;
@@ -31,14 +28,41 @@ header {
 
   @media screen and (max-width: 768px) {
     ul {
-      display: none;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: 70px;
+      left: 0;
+      background-color: hsl(22, 65%, 57%);
+      animation: ease .5s slidein;
+
+
+      @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+
+      li{
+        margin: 20px 0;
+        font-weight: 700;
+        font-size: 30px;
+      }
     }
-    nav{
+    nav {
       order: -1;
     }
 
     .nav-btn {
-      display: block;
+      // display: block;
       background-color: transparent;
       fill: white;
       border: none;
