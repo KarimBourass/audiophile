@@ -3,6 +3,8 @@
   margin: 1em auto;
 
   .speaker-one {
+    margin: 0 1em;
+    border-radius: 10px;
     padding: 3em 1em 0 1em;
     background-color: hsl(22, 65%, 57%);
     color: #fff;
@@ -39,9 +41,6 @@
 @media screen and (max-width: 1124px) {
   .container {
     .speaker-one {
-      padding: 3em 1em 0 1em;
-      background-color: red;
-      color: #fff;
       display: flex;
       flex-direction: column;
 
@@ -50,7 +49,6 @@
         height: 293px;
         width: 230px;
       }
-
       .article-text {
         margin: 2em auto;
         text-align: center;
