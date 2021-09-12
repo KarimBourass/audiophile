@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { HeroComponent } from './component/hero/hero.component';
 import { RouterModule, Routes } from '@angular/router';
+import { UnderHeroComponent } from './component/under-hero/under-hero.component';
+import { ProductsAdComponent } from './component/products-ad/products-ad.component';
 
 const routes: Routes = [
   {
@@ -16,7 +18,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     HomeComponent,
-    HeroComponent
+    HeroComponent,
+    UnderHeroComponent,
+    ProductsAdComponent
   ],
   imports: [
     CommonModule,

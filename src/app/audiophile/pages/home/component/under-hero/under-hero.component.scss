@@ -1,0 +1,64 @@
+.container {
+  max-width: 1440px;
+  margin: 150px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+
+  .card {
+    position: relative;
+    background-color: #f1f1f1;
+    width: 100%;
+    max-width: 350px;
+    height: 204px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1em;
+
+    .product-logo {
+      width: 80%;
+      position: absolute;
+      top: -6em;
+    }
+
+    button {
+      margin-top: 1em;
+      background-color: transparent;
+      border: none;
+      color: hsl(0, 0%, 59%);
+      &:hover {
+        cursor: pointer;
+      }
+      img {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1124px) {
+  .container {
+    margin: 100px auto;
+    justify-content: space-around;
+    .card {
+      max-width: 200px;
+      height: 180px;
+      .product-logo {
+        top: -3em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    .card {
+      margin: 2em 0;
+      width: 100vw;
+    }
+  }
+}
