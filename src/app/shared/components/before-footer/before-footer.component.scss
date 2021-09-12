@@ -1,5 +1,5 @@
 .container {
-  margin: 10em 0;
+  margin: 10em auto;
   max-width: 1440px;
   width: 100%;
   display: grid;
@@ -22,11 +22,7 @@
       color: hsl(0, 0%, 59%);
     }
   }
-  img {
-    padding: 0;
-    border-radius: 10px;
-    margin: 0 1em;
-  }
+
 }
 
 @media screen and (max-width: 1124px) {
