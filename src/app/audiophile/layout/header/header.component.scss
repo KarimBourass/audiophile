@@ -24,6 +24,13 @@ header {
     text-decoration: none;
     margin: 0 1em;
     color: #fff;
+    &:hover {
+      color: hsl(22, 65%, 57%);
+    }
+  }
+
+  img {
+    cursor: pointer;
   }
 
   @media screen and (max-width: 768px) {
@@ -36,8 +43,7 @@ header {
       top: 70px;
       left: 0;
       background-color: hsl(22, 65%, 57%);
-      animation: ease .5s slidein;
-
+      animation: ease 0.5s slidein;
 
       @keyframes slidein {
         from {
@@ -51,7 +57,7 @@ header {
         }
       }
 
-      li{
+      li {
         margin: 20px 0;
         font-weight: 700;
         font-size: 30px;

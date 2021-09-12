@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.breakpointObserver
-      .observe(['(min-width: 768px)'])
+      .observe(['(min-width: 769px)'])
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
           console.log('Viewport width is 768px or greater!');
