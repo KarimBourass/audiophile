@@ -55,15 +55,22 @@ h6 {
   border: none;
   font-weight: 400;
   font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.btn-one-hover{
+.btn-one-hover {
   background-color: $main-light-color;
   color: #fff;
   padding: 1em 2em;
   border: none;
   font-weight: 400;
   font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .btn-two-default {
@@ -72,6 +79,9 @@ h6 {
   padding: 1em 2em;
   border: 1px solid black;
   font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .btn-two-hover {
@@ -80,4 +90,16 @@ h6 {
   padding: 1em 2em;
   border: 1px solid black;
   font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
