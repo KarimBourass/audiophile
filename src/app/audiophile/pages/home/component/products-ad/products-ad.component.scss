@@ -3,25 +3,35 @@
   margin: 1em auto;
 
   .speaker-one {
-    padding-top: 3em;
+    padding: 3em 1em 0 1em;
     background-color: hsl(22, 65%, 57%);
     color: #fff;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
     img {
-      width: 20%;
+      width: 30%;
+      grid-column: 1/3;
+      margin: 0 auto;
+      height: 493px;
+      width: 410px;
     }
 
     .article-text {
-      height: 100%;
-      width: 40%;
-      h2{
-        margin: 1em 0;
+      width: 100%;
+      max-width: 300px;
+      max-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      h1{
+        margin: .25em 0;
+        line-height: 1em;
       }
       p{
-        margin: 1em 0;
+        margin: 2em 0;
+
       }
     }
   }
