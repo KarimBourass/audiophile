@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './audiophile/layout/header/header.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     BrowserModule,
     AppRoutingModule,
     LayoutModule, // for breakpoint,
-    HomeModule
+    HomeModule,
+    SharedModule
 
   ],
   providers: [],
