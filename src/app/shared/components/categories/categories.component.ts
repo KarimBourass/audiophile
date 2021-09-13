@@ -10,11 +10,12 @@ export class CategoriesComponent implements OnInit {
   products = [
     {
       'imgPath': "../../../../../../assets/shared/desktop/image-category-thumbnail-headphones.png",
-      'name': 'headphones'
+      'name': 'headphones',
     },
     {
       'imgPath': "../../../../../../assets/shared/desktop/image-category-thumbnail-speakers.png",
-      'name': 'speakers'
+      'name': 'speakers',
+
     },
     {
       'imgPath': "../../../../../../assets/shared/desktop/image-category-thumbnail-earphones.png",
