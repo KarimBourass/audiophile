@@ -1,3 +1,4 @@
+import { CategoryModule } from './audiophile/pages/category/category.module';
 import { HomeModule } from './audiophile/pages/home/home.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,7 +20,8 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     LayoutModule, // for breakpoint,
     HomeModule,
-    SharedModule
+    SharedModule,
+    CategoryModule
 
   ],
   providers: [],
