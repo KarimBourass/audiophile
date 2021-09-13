@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-under-hero',
-  templateUrl: './under-hero.component.html',
-  styleUrls: ['./under-hero.component.scss']
+  selector: 'app-categories',
+  templateUrl: './categories.component.html',
+  styleUrls: ['./categories.component.scss']
 })
-export class UnderHeroComponent implements OnInit {
-
+export class CategoriesComponent implements OnInit {
 
   products = [
     {
