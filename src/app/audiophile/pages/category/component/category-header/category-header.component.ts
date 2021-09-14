@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
@@ -8,11 +8,10 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class CategoryHeaderComponent implements OnInit {
 
-  headerName = ''
-  constructor(private route: ActivatedRoute) { }
+  @Input() headerName = ''
+  constructor() { }
 
   ngOnInit() {
-    this.headerName = this.route.parent?.snapshot.paramMap.get('id') || 'hhh'
   }
 
 }

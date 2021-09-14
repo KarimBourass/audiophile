@@ -1,1 +1,3 @@
-<app-category-header></app-category-header>
+<app-category-header [headerName]='categoryName'></app-category-header>
+<app-showcase-product *ngFor="let product of products" [product]='product'></app-showcase-product>
+<app-categories> </app-categories>

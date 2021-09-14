@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CategoryComponent } from './category.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CategoryHeaderComponent } from './component/category-header/category-header.component';
+import { ShowcaseProductComponent } from './component/showcase-product/showcase-product.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     CategoryComponent,
-    CategoryHeaderComponent
+    CategoryHeaderComponent,
+    ShowcaseProductComponent
   ],
   imports: [
     CommonModule,
