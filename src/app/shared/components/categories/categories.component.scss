@@ -1,6 +1,6 @@
 .container {
   max-width: 1440px;
-  margin: 150px auto;
+  margin: 250px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,7 +42,6 @@
 
 @media screen and (max-width: 1124px) {
   .container {
-    margin: 100px auto;
     justify-content: space-around;
     .card {
       max-width: 200px;
@@ -58,7 +57,7 @@
   .container {
     flex-direction: column;
     .card {
-      margin: 3em 0;
+      margin: 5em 0;
       max-width: 100%;
 
       .product-logo {
