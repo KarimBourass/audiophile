@@ -1,5 +1,5 @@
 <header>
-  <img src="../../../../assets/shared/desktop/logo.svg" alt="logo" class="logo">
+  <img [routerLink]="['/']" src="../../../../assets/shared/desktop/logo.svg" alt="logo" class="logo">
   <nav>
     <button *ngIf="showBurgerMenu" class="nav-btn" (click)="displayNav()">
       <svg viewBox="0 0 100 80" width="40" height="40">
@@ -13,13 +13,13 @@
         <a href="/">HOME</a>
       </li>
       <li>
-        <a href="/">HEADPHONES</a>
+        <a [routerLink]="['/category', 'headphones']">HEADPHONES</a>
       </li>
       <li>
-        <a href="/">SPEAKERS</a>
+        <a [routerLink]="['/category', 'speakers']">SPEAKERS</a>
       </li>
       <li>
-        <a href="/">EARPHONES</a>
+        <a [routerLink]="['/category', 'earphones']">EARPHONES</a>
       </li>
     </ul>
   </nav>
