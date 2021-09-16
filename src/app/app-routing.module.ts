@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./audiophile/pages/category/category.module').then(m => m.CategoryModule),
   },
   {
+    path: 'product/:id',
+    loadChildren: () => import('./audiophile/pages/product-details/product-details.module').then(m => m.ProductDetailsModule),
+  },
+  {
     path: '',
     loadChildren: () => import('./audiophile/pages/home/home.module').then(m => m.HomeModule),
   },
