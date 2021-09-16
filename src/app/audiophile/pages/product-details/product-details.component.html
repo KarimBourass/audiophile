@@ -1,1 +1,50 @@
-<p>product-details works!</p>
+<div class="header"></div>
+
+<article class="product-card">
+  <picture class="flex-center">
+    <source media="(min-width: 1124px)" srcset={{product?.categoryImage?.desktop}}>
+    <source media="(min-width: 768px)" srcset={{product?.categoryImage?.tablet}}>
+    <img src={{product?.categoryImage?.mobile}} alt="before hero image">
+  </picture>
+  <div class="product-description">
+    <span>New product</span>
+    <h1>{{product.slug}}</h1>
+    <p>{{product.description}}</p>
+    <span class="price">$ {{product.price}}</span>
+    <div class="btns">
+      <div class="qte-btn">
+        <button (click)='minusQte()'>-</button>
+        <span>{{productQte}}</span>
+        <button (click)='addQte()'>+</button>
+      </div>
+      <button class="btn-one-default" (click)='addToCart(product)'>ADD TO CART</button>
+    </div>
+  </div>
+
+</article>
+
+<article class="product-featues">
+  <h2>FEATURES</h2>
+  <p>{{product.features}}</p>
+</article>
+
+
+<!-- <article class="product-images">
+  <div class="tzp">
+    <picture class="flex-center">
+      <source media="(min-width: 1124px)" srcset={{product?.gallery.first?.desktop}}>
+      <source media="(min-width: 768px)" srcset={{product?.gallery.first?.tablet}}>
+      <img src={{product?.gallery.first?.mobile}} alt="before hero image">
+    </picture>
+    <picture class="flex-center">
+      <source media="(min-width: 1124px)" srcset={{product?.gallery.second?.desktop}}>
+      <source media="(min-width: 768px)" srcset={{product?.gallery.second?.tablet}}>
+      <img src={{product?.gallery.second?.mobile}} alt="before hero image">
+    </picture>
+  </div>
+  <picture class="flex-center">
+    <source media="(min-width: 1124px)" srcset={{product?.gallery.third?.desktop}}>
+    <source media="(min-width: 768px)" srcset={{product?.gallery.third?.tablet}}>
+    <img src={{product?.gallery.third?.mobile}} alt="before hero image">
+  </picture>
+</article> -->
