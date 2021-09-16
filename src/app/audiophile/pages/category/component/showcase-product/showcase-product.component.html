@@ -8,6 +8,6 @@
     <span>New product</span>
     <h1>{{product.slug}}</h1>
     <p>{{product.description}}.</p>
-    <button class="btn-one-default">See product</button>
+    <button class="btn-one-default" [routerLink]="['/product', product.slug]">See product</button>
   </div>
 </article>

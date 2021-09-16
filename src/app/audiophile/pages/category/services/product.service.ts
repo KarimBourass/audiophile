@@ -13,6 +13,10 @@ export class ProductService {
     return products;
   }
 
+  getProductBySlug(slug: string) {
+    return products.filter(product => product.slug == slug);
+  }
+
 
   getProductByCategory(cat: string) {
     return products.filter(product => product.category == cat);
