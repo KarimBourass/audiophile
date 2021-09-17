@@ -24,8 +24,18 @@
 </article>
 
 <article class="product-featues">
-  <h2>FEATURES</h2>
-  <p>{{product.features}}</p>
+  <article class="features-text">
+    <h2>FEATURES</h2>
+    <p>{{product.features}}</p>
+  </article>
+  <article class="in-the-box">
+    <h2>IN THE BOX</h2>
+    <div class="in-the-box-text" *ngFor="let item of product.includes">
+      <b>{{item.quantity}}x</b>
+      <p>{{item.item}}</p>
+    </div>
+
+  </article>
 </article>
 
 
