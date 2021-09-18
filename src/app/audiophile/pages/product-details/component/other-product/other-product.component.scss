@@ -1,0 +1,28 @@
+.other-product {
+  max-width: 1440px;
+  margin: 7em auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .other-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      margin: 0.75em 0;
+    }
+    img {
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    .other-card {
+      margin-top: 2.5em;
+    }
+  }
+}
