@@ -6,6 +6,8 @@
       <img src={{item?.image?.mobile}} alt="before hero image">
     </picture>
     <h3>{{item.name}}</h3>
-    <button class="btn-one-default">SEDD TO CART</button>
+    <button class="btn-one-default" [routerLink]="['/product', item.slug]">SEE PRODUCT</button>
   </div>
 </div>
+
+
