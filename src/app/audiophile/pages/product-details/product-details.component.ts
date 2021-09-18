@@ -10,7 +10,6 @@ import { ProductService } from '../category/services/product.service';
 export class ProductDetailsComponent implements OnInit {
 
   product: any;
-  productQte = 0
   constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -20,24 +19,9 @@ export class ProductDetailsComponent implements OnInit {
         res = this.productService.getProductBySlug(data?.params.id);
         this.product = res[0]
         console.log('pr', this.product);
-
       }
     )
   }
 
-  minusQte() {
-    if (this.productQte != 0) {
-      this.productQte = this.productQte - 1;
-    }
-  }
-
-  addQte() {
-    this.productQte = this.productQte + 1;
-  }
-
-  addToCart(product: any){
-    console.log('product',product);
-
-  }
 
 }

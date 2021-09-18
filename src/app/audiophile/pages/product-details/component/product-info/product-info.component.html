@@ -1,1 +1,22 @@
-<p>product-info works!</p>
+<article class="product-card">
+  <picture class="flex-center">
+    <source media="(min-width: 1124px)" srcset={{product?.categoryImage?.desktop}}>
+    <source media="(min-width: 768px)" srcset={{product?.categoryImage?.tablet}}>
+    <img src={{product?.categoryImage?.mobile}} alt="before hero image">
+  </picture>
+  <div class="product-description">
+    <span>New product</span>
+    <h1>{{product.slug}}</h1>
+    <p>{{product.description}}</p>
+    <span class="price">$ {{product.price}}</span>
+    <div class="btns">
+      <div class="qte-btn">
+        <button (click)='minusQte()'>-</button>
+        <span>{{productQte}}</span>
+        <button (click)='addQte()'>+</button>
+      </div>
+      <button class="btn-one-default" (click)='addToCart(product)'>ADD TO CART</button>
+    </div>
+  </div>
+
+</article>

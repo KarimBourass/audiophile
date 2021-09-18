@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-info',
@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductInfoComponent implements OnInit {
 
+  @Input() product: any;
+  productQte = 0
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  minusQte() {
+    if (this.productQte != 0) {
+      this.productQte = this.productQte - 1;
+    }
+  }
+
+  addQte() {
+    this.productQte = this.productQte + 1;
+  }
+
+  addToCart(product: any){
+    console.log('product',product);
+
   }
 
 }

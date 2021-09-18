@@ -6,6 +6,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductInfoComponent } from './component/product-info/product-info.component';
 import { ProductFeaturesComponent } from './component/product-features/product-features.component';
 import { ProductImagesComponent } from './component/product-images/product-images.component';
+import { OtherProductComponent } from './component/other-product/other-product.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,8 @@ const routes: Routes = [
     ProductDetailsComponent,
     ProductInfoComponent,
     ProductFeaturesComponent,
-    ProductImagesComponent
+    ProductImagesComponent,
+    OtherProductComponent
   ],
   imports: [
     CommonModule,
