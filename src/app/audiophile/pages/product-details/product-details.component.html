@@ -40,7 +40,7 @@
 
 
 <article class="product-images">
-  <div>
+  <div class="small-imgs">
     <picture class="flex-center">
       <source media="(min-width: 1124px)" srcset={{product?.gallery.first?.desktop}}>
       <source media="(min-width: 768px)" srcset={{product?.gallery.first?.tablet}}>
@@ -57,5 +57,24 @@
     <source media="(min-width: 768px)" srcset={{product?.gallery.third?.tablet}}>
     <img class="large-img" src={{product?.gallery.third?.mobile}} alt="before hero image">
   </picture>
-
 </article>
+
+
+
+<div class="other-product">
+  <div class="other-card" *ngFor="let item of product.others">
+    <picture class="flex-center">
+      <source media="(min-width: 1124px)" srcset={{item?.image?.desktop}}>
+      <source media="(min-width: 768px)" srcset={{item?.image?.tablet}}>
+      <img src={{item?.image?.mobile}} alt="before hero image">
+    </picture>
+    <h3>{{item.name}}</h3>
+    <button class="btn-one-default">SEDD TO CART</button>
+  </div>
+</div>
+
+
+<app-categories></app-categories>
+
+
+<app-before-footer></app-before-footer>
