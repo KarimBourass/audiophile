@@ -1,3 +1,4 @@
+import { ModalService } from 'src/app/shared/components/services/modal.service';
 import { products } from './../../../../../shared/data/products';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -11,7 +12,7 @@ export class ProductInfoComponent implements OnInit {
   @Input() product: any;
   productQte = 0
 
-  constructor() { }
+  constructor(private modalService:ModalService) { }
 
   ngOnInit(): void {
   }
@@ -29,36 +30,39 @@ export class ProductInfoComponent implements OnInit {
 
   addToCart(product: any) {
 
-    let newCart = []
+    if (this.productQte > 0) {
+      let newCart = []
+      const oldCart = JSON.parse(localStorage.getItem("products") || "[]");
+      console.log('Already in the store', oldCart);
+      console.log("proo", product);
+      const toStore = {
+        id: product.id,
+        price: product.price,
+        name: product.name,
+        qte: this.productQte,
+        image: product.image.mobile
+      }
 
-    const oldCart = JSON.parse(localStorage.getItem("products") || "[]");
-    console.log('Already in the store', oldCart);
-
-    const toStore = {
-      id: product.id,
-      price: product.price,
-      nane: product.name,
-      qte: this.productQte
+      if (!oldCart.length) {
+        newCart = [toStore]
+        localStorage.setItem('products', JSON.stringify(newCart))
+      }
+      else {
+        oldCart.forEach((pct: any) => {
+          if (pct.id == product.id) {
+            pct.qte = pct.qte + this.productQte
+            newCart = [...oldCart]
+            localStorage.setItem('products', JSON.stringify(newCart))
+          }
+          else {
+            newCart = [...oldCart, toStore]
+            localStorage.setItem('products', JSON.stringify(newCart))
+          }
+        });
+      }
+      this.modalService.openCartDialog();
+      this.productQte = 0;
     }
-
-    if (!oldCart.length) {
-      newCart = [toStore]
-      localStorage.setItem('products', JSON.stringify(newCart))
-    }
-    else {
-      oldCart.forEach((pct: any) => {
-        if (pct.id == product.id) {
-          pct.qte = pct.qte + this.productQte
-          newCart = [...oldCart]
-          localStorage.setItem('products', JSON.stringify(newCart))
-        }
-        else {
-          newCart = [...oldCart, toStore]
-          localStorage.setItem('products', JSON.stringify(newCart))
-        }
-      });
-    }
-
 
 
   }
