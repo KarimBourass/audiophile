@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { BeforeFooterComponent } from './components/before-footer/before-footer.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CartComponent } from './components/cart/cart.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 
 
@@ -15,11 +17,13 @@ import { CartComponent } from './components/cart/cart.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatDialogModule
   ],
   exports: [
     BeforeFooterComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    MatDialogModule
   ]
 })
 export class SharedModule { }
