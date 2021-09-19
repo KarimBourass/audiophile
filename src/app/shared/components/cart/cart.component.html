@@ -1,1 +1,28 @@
-<p>cart works!</p>
+<div class="container">
+  <div class="cart-header">
+    <h5>CART ({{cart.length}})</h5>
+    <button (click)="removeAll()">Remove All</button>
+  </div>
+
+  <div class="products" *ngFor="let product of cart">
+    <div class="product-info">
+      <img src={{product.image}} alt="product image">
+      <div class="product-name">
+        <h6>{{product.name}}</h6>
+        <h6>$ {{product.price}}</h6>
+      </div>
+    </div>
+    <div class="qte-btn">
+      <button (click)="minusQte(product)">-</button>
+      <span>{{product.qte}}</span>
+      <button (click)="addQte(product)">+</button>
+    </div>
+  </div>
+
+  <div class="cart-footer">
+    <h5 class="total">TOTAL</h5>
+    <h5>$ {{total}}</h5>
+  </div>
+  <button class="btn-one-default checkout">CHECKOUT</button>
+
+</div>
