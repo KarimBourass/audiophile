@@ -1,3 +1,4 @@
+import { ModalService } from 'src/app/shared/components/services/modal.service';
 import { Component, OnInit } from '@angular/core';
 import {
   BreakpointObserver,
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
   showNav = false;
   showBurgerMenu = false;
 
-  constructor(public breakpointObserver: BreakpointObserver) { }
+  constructor(public breakpointObserver: BreakpointObserver,private modalService:ModalService) { }
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -35,7 +36,10 @@ export class HeaderComponent implements OnInit {
   displayNav(){
     console.log('dir khdemtek');
     this.showNav = !this.showNav;
+  }
 
+  openCart(){
+    this.modalService.openCartDialog();
   }
 
 }
