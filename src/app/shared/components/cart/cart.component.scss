@@ -1,4 +1,10 @@
 .container {
+  @media screen and (min-width: 600px) {
+    min-width: 400px;
+
+  }
+
+
   .cart-header {
     display: flex;
     justify-content: space-between;

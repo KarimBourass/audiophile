@@ -21,7 +21,11 @@ export class CartComponent implements OnInit {
     this.cart.filter(pro => pro.id == product.id && pro.qte > 0)
       .map(product => {
         product.qte = product.qte - 1;
-        localStorage.setItem('products', JSON.stringify(this.cart));
+        if (product.qte > 0) {
+          localStorage.setItem('products', JSON.stringify(this.cart));
+        } else {
+          this.cart.splice(this.cart.indexOf(product), 1);
+        }
         this.changeQte("minus", product.price);
       });
   }
