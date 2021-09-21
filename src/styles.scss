@@ -104,3 +104,12 @@ h6 {
   align-items: center;
   justify-content: center;
 }
+
+input {
+  height: 56px;
+  border: 1px solid #cfcfcf;
+  padding: .5em 0.75em;
+  font-weight: 700;
+  border-radius: 8px;
+  outline-color: hsl(22, 65%, 57%);
+}
