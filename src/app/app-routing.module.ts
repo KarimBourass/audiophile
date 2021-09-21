@@ -14,6 +14,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./audiophile/pages/home/home.module').then(m => m.HomeModule),
   },
+  {
+    path: 'checkout',
+    loadChildren: () => import('./audiophile/pages/checkout/checkout.module').then(m => m.CheckoutModule),
+  },
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 
