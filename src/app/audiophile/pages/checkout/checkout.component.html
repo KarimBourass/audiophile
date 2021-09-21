@@ -1,0 +1,108 @@
+<div class="header"></div>
+<div class="background">
+  <div class="checkout-container">
+    <div class="checkout">
+      <h2>CHECKOUT</h2>
+      <div class="card">
+        <h6>Billing Details</h6>
+        <div class="card-inputs">
+          <label class="input-field">
+            <span>Name</span>
+            <input type="text" placeholder="Karim Bourass" />
+          </label>
+          <label class="input-field">
+            <span>Email Address</span>
+            <input type="text" placeholder="karimbourass@gmail.com" />
+          </label>
+          <label class="input-field">
+            <span>Phone Number</span>
+            <input type="number" placeholder="Karim Bourass" />
+          </label>
+        </div>
+      </div>
+
+      <div class="card">
+        <h6>shipping info</h6>
+        <div class="card-inputs">
+          <label class="input-field adress">
+            <span>Address</span>
+            <input type="text" placeholder="1137 Williams Avenue" />
+          </label>
+          <label class="input-field">
+            <span>ZIP Code</span>
+            <input type="text" placeholder="10001" />
+          </label>
+          <label class="input-field">
+            <span>City</span>
+            <input type="number" placeholder="New York" />
+          </label>
+          <label class="input-field">
+            <span>Country</span>
+            <input type="number" placeholder="United States" />
+          </label>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <h6>payment details</h6>
+        <div class="card-inputs">
+
+          <div class="payment">
+            <span>Payment Method</span>
+            <label class="payment-options">
+              <input type="radio" />
+              <span>e-Money</span>
+            </label>
+            <label class="payment-options">
+              <input type="radio" />
+              <span>e-Money</span>
+            </label>
+          </div>
+          <label class="input-field">
+            <span>e-Money Number</span>
+            <input type="number" placeholder="238521993" />
+          </label>
+          <label class="input-field">
+            <span>e-Money PIN</span>
+            <input type="number" placeholder="6891" />
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="summary">
+      <h5>summary</h5>
+
+      <div class="products" *ngFor="let product of cart">
+        <div class="product-info">
+          <img src={{product.image}} alt="product image">
+          <div class="product-name">
+            <h6>{{product.name}}</h6>
+            <h6>$ {{product.price}}</h6>
+          </div>
+        </div>
+        <span>x{{product.qte}}</span>
+      </div>
+
+      <div class="summary-pricing">
+        <p class="total">TOTAL</p>
+        <h6>$ {{total}}</h6>
+      </div>
+      <div class="summary-pricing">
+        <p>VAT (INCLUDED)</p>
+        <h6>$ 50</h6>
+      </div>
+      <div class="summary-pricing">
+        <p>TOTAL</p>
+        <h6>$ 1,079</h6>
+      </div>
+      <div class="summary-pricing grand">
+        <p>GRAND TOTAL</p>
+        <h6 class="grand-total">$ 5,446</h6>
+      </div>
+      <button class="btn-one-default pay-btn">CONTINUE & PAY</button>
+    </div>
+  </div>
+</div>
