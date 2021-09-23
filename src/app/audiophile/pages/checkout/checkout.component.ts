@@ -21,6 +21,9 @@ export class CheckoutComponent implements OnInit {
       this.total = this.total + product.price * product.qte;
     });
     localStorage.setItem('products', JSON.stringify(this.cart))
-
   }
+
+
+
+
 }
