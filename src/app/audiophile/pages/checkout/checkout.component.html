@@ -72,37 +72,6 @@
 
     </div>
 
-    <div class="summary">
-      <h5>summary</h5>
-
-      <div class="products" *ngFor="let product of cart">
-        <div class="product-info">
-          <img src={{product.image}} alt="product image">
-          <div class="product-name">
-            <h6>{{product.name}}</h6>
-            <h6>$ {{product.price}}</h6>
-          </div>
-        </div>
-        <span>x{{product.qte}}</span>
-      </div>
-
-      <div class="summary-pricing">
-        <p class="total">TOTAL</p>
-        <h6>$ {{total}}</h6>
-      </div>
-      <div class="summary-pricing">
-        <p>VAT (INCLUDED)</p>
-        <h6>$ 50</h6>
-      </div>
-      <div class="summary-pricing">
-        <p>TOTAL</p>
-        <h6>$ 1,079</h6>
-      </div>
-      <div class="summary-pricing grand">
-        <p>GRAND TOTAL</p>
-        <h6 class="grand-total">$ 5,446</h6>
-      </div>
-      <button class="btn-one-default pay-btn">CONTINUE & PAY</button>
-    </div>
+    <app-summary></app-summary>
   </div>
 </div>

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CheckoutComponent } from './checkout.component';
 import { Routes, RouterModule } from '@angular/router';
+import { CheckoutFormComponent } from './components/checkout-form/checkout-form.component';
+import { SummaryComponent } from './components/summary/summary.component';
 
 
 const routes: Routes = [
@@ -15,7 +17,9 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    CheckoutComponent
+    CheckoutComponent,
+    CheckoutFormComponent,
+    SummaryComponent
   ],
   imports: [
     CommonModule,
