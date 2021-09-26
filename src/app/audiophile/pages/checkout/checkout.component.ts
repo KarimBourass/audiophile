@@ -31,9 +31,10 @@ export class CheckoutComponent implements OnInit {
     }),
 
   });
-  constructor(private orderDialog:ModalService) { }
+  constructor(private orderDialog: ModalService) { }
 
   ngOnInit(): void {
+    this.onSubmit(2351)
 
   }
 

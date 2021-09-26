@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderDialogComponent implements OnInit {
 
+  cart: any[] = [];
   constructor() { }
 
   ngOnInit(): void {
+    this.cart = JSON.parse(localStorage.getItem("products") || "[]");
   }
 
 }
