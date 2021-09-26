@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CheckoutComponent } from './checkout.component';
 import { Routes, RouterModule } from '@angular/router';
-import { CheckoutFormComponent } from './components/checkout-form/checkout-form.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OrderDialogComponent } from './components/order-dialog/order-dialog.component';
 
 
 const routes: Routes = [
@@ -18,13 +19,15 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     CheckoutComponent,
-    CheckoutFormComponent,
-    SummaryComponent
+    SummaryComponent,
+    OrderDialogComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CheckoutModule { }

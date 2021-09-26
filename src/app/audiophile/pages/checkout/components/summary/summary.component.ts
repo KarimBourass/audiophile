@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-summary',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
 
+
+  @Output() onSubmitForm: EventEmitter<number> = new EventEmitter();
+
   cart: any[] = [];
   total: number = 0;
+  grandTotal: number = 0;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,7 +26,13 @@ export class SummaryComponent implements OnInit {
     this.cart.forEach((product: any) => {
       this.total = this.total + product.price * product.qte;
     });
+    this.grandTotal = this.total + 50 + 1079;
     localStorage.setItem('products', JSON.stringify(this.cart))
+  }
+
+
+  submitForm() {
+    this.onSubmitForm.emit(this.grandTotal)
   }
 
 }

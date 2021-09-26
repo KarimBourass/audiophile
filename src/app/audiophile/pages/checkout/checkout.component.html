@@ -1,22 +1,22 @@
 <div class="header"></div>
 <div class="background">
   <div class="checkout-container">
-    <div class="checkout">
+    <form class="checkout" [formGroup]="checkForm"(ngSubmit)="onSubmit($event)">
       <h2>CHECKOUT</h2>
-      <div class="card">
+      <div class="card" formGroupName="billing">
         <h6>Billing Details</h6>
         <div class="card-inputs">
           <label class="input-field">
             <span>Name</span>
-            <input type="text" placeholder="Karim Bourass" />
+            <input type="text" placeholder="Karim Bourass" formControlName="name" />
           </label>
           <label class="input-field">
             <span>Email Address</span>
-            <input type="text" placeholder="bourasskarim9@gmail.com" />
+            <input type="text" placeholder="bourasskarim9@gmail.com" formControlName="email"/>
           </label>
           <label class="input-field">
             <span>Phone Number</span>
-            <input type="number" placeholder="+1 202-555-0136" />
+            <input type="number" placeholder="+1 202-555-0136" formControlName="phone" />
           </label>
         </div>
       </div>
@@ -70,8 +70,8 @@
         </div>
       </div>
 
-    </div>
+    </form>
 
-    <app-summary></app-summary>
+    <app-summary (onSubmitForm)="onSubmit($event)"></app-summary>
   </div>
 </div>
