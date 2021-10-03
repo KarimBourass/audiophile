@@ -34,14 +34,11 @@ export class CheckoutComponent implements OnInit {
   constructor(private orderDialog: ModalService) { }
 
   ngOnInit(): void {
-    this.onSubmit(2351)
-
   }
 
 
   onSubmit(grandTotal: number) {
     this.orderDialog.openFinalOrderDialog(grandTotal);
-
   }
 
 
