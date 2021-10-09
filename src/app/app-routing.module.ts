@@ -31,7 +31,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./audiophile/pages/home/home.module').then(m => m.HomeModule),
     data: {
-      title: '',
+      title: 'Home',
       description: 'Audiophile Home page'
     }
   },
