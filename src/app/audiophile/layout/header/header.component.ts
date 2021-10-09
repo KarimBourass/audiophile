@@ -40,14 +40,12 @@ export class HeaderComponent implements OnInit {
       .observe(['(min-width: 769px)'])
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
-          console.log('Viewport width is 768px or greater!');
           this.showNav = true
           this.showBurgerMenu = false
           this.mobielMenu = false;
         } else {
           this.showNav = false
           this.showBurgerMenu = true
-          console.log('Viewport width is less than 768px!');
         }
       });
   }
