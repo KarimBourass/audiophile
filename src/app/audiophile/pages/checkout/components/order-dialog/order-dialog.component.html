@@ -6,7 +6,7 @@
     <div class="products">
       <ng-container *ngFor="let product of cart;let i = index">
         <article class="product-info" *ngIf="i%2 == 0">
-          <img src={{product.image}} alt="product image">
+          <img loading=lazy src={{product.image}} alt="product image">
           <div class="product-name">
             <p>{{product.name}}</p>
             <h6>$ {{product.price}}</h6>

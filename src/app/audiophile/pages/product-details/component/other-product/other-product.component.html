@@ -3,7 +3,7 @@
     <picture class="flex-center">
       <source media="(min-width: 1124px)" srcset={{item?.image?.desktop}}>
       <source media="(min-width: 768px)" srcset={{item?.image?.tablet}}>
-      <img src={{item?.image?.mobile}} alt="before hero image">
+      <img loading=lazy src={{item?.image?.mobile}} alt="before hero image">
     </picture>
     <h3>{{item.name}}</h3>
     <button class="btn-one-default" [routerLink]="['/product', item.slug]">SEE PRODUCT</button>

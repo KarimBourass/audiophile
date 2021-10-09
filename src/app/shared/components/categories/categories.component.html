@@ -1,9 +1,9 @@
 <div class="container">
   <div class="card" *ngFor="let product of products">
-    <img class="product-logo" src="{{product.imgPath}}" alt="hh" />
+    <img loading=lazy class="product-logo" src="{{product.imgPath}}" alt={{product.name}} />
     <h4>{{product.name}}</h4>
     <a [routerLink]="['/category', product.name]" routerLinkActive="active">SHOP
-      <img src="../../../../../../assets/shared/desktop/icon-arrow-right.svg" alt="arrow btn">
+      <img loading=lazy src="../../../../../../assets/shared/desktop/icon-arrow-right.svg" alt="arrow btn">
     </a>
   </div>
 </div>
