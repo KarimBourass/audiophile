@@ -27,7 +27,7 @@
       <div class="card" *ngFor="let product of products">
         <img class="product-logo" src="{{product.imgPath}}" alt="hh" />
         <h5>{{product.name}}</h5>
-        <a [routerLink]="['/category', product.name]" routerLinkActive="active">SHOP
+        <a (click)="onRouterLink(product.name)" routerLinkActive="active">SHOP
           <img src="../../../../../../assets/shared/desktop/icon-arrow-right.svg" alt="arrow btn">
         </a>
       </div>

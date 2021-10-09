@@ -4,6 +4,7 @@ import {
   BreakpointObserver,
   BreakpointState
 } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -32,7 +33,7 @@ export class HeaderComponent implements OnInit {
     },
   ]
 
-  constructor(public breakpointObserver: BreakpointObserver, private modalService: ModalService) { }
+  constructor(public breakpointObserver: BreakpointObserver, private modalService: ModalService, private router: Router) { }
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -49,16 +50,19 @@ export class HeaderComponent implements OnInit {
           console.log('Viewport width is less than 768px!');
         }
       });
-    this.displayNav()
   }
 
   displayNav() {
     this.mobielMenu = !this.mobielMenu;
-    console.log('mobielMenu', this.mobielMenu);
   }
 
   openCart() {
     this.modalService.openCartDialog();
+  }
+
+  onRouterLink(path: string) {
+    this.router.navigate(['/category', path]);
+    this.mobielMenu = false
   }
 
 }

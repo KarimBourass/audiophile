@@ -34,26 +34,6 @@ header {
   }
 
   @media screen and (max-width: 768px) {
-    // ul {
-
-    //   @keyframes slidein {
-    //     from {
-    //       margin-left: 100%;
-    //       width: 300%;
-    //     }
-
-    //     to {
-    //       margin-left: 0%;
-    //       width: 100%;
-    //     }
-    //   }
-
-    //   li {
-    //     margin: 20px 0;
-    //     font-weight: 700;
-    //     font-size: 30px;
-    //   }
-    // }
     nav {
       order: -1;
     }
@@ -91,17 +71,17 @@ header {
   .card {
     position: relative;
     background-color: #f1f1f1;
-    width: 70%;
-    height: 110px;
+    width: 80%;
+    height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     border-radius: 10px;
-    margin: 4em auto;
+    margin: 3em auto;
 
     &:nth-child(1) {
-      margin-top: 7em;
+      margin-top: 6em;
     }
 
     .product-logo {
