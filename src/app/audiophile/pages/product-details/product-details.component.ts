@@ -18,7 +18,6 @@ export class ProductDetailsComponent implements OnInit {
       (data: any) => {
         res = this.productService.getProductBySlug(data?.params.id);
         this.product = res[0]
-        console.log('pr', this.product);
       }
     )
   }

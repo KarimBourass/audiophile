@@ -33,8 +33,6 @@ export class ProductInfoComponent implements OnInit {
     if (this.productQte > 0) {
       let newCart = []
       const oldCart = JSON.parse(localStorage.getItem("products") || "[]");
-      console.log('Already in the store', oldCart);
-      console.log("proo", product);
       const toStore = {
         id: product.id,
         price: product.price,

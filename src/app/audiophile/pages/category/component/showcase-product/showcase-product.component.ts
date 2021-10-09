@@ -11,7 +11,6 @@ export class ShowcaseProductComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('product',this.product);
   }
 
 }
