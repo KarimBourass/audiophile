@@ -1,6 +1,7 @@
 import { ProductService } from './services/product.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-category',
@@ -10,14 +11,14 @@ import { ActivatedRoute } from '@angular/router';
 export class CategoryComponent implements OnInit {
 
   categoryName = ''
-  products: any[] = [];
+  products$!: Observable<any[]>;
   constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit(): void {
     this.route.parent?.paramMap.subscribe(
       (data: any) => {
         this.categoryName = data?.params.id,
-          this.products = this.productService.getProductByCategory(this.categoryName);
+          this.products$ = this.productService.getProductByCategory(this.categoryName);
       }
     )
   }

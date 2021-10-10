@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { of } from 'rxjs';
 import { products } from 'src/app/shared/data/products';
 
 @Injectable({
@@ -19,7 +20,8 @@ export class ProductService {
 
 
   getProductByCategory(cat: string) {
-    return products.filter(product => product.category == cat);
+    // return products.filter(product => product.category == cat);
+    return of(products.filter(product => product.category == cat));
   }
 
 
