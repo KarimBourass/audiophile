@@ -23,6 +23,6 @@
     <h5 class="total">TOTAL</h5>
     <h5>$ {{total}}</h5>
   </div>
-  <button [mat-dialog-close]="true" [routerLink]="['/checkout']" class="btn-one-default checkout">CHECKOUT</button>
+  <button [disabled]="!cart.length" [mat-dialog-close]="true" [routerLink]="['/checkout']" class="btn-one-default checkout">CHECKOUT</button>
 
 </div>

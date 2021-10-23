@@ -58,6 +58,10 @@ h6 {
   &:hover {
     cursor: pointer;
   }
+  &:disabled{
+    cursor: auto;
+    background-color: gray;
+  }
 }
 
 .btn-one-hover {
